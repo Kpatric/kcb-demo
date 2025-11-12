@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: kcb_api
+    build: .
+    ports:
+      - "${SERVER_PORT:-8080}:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SERVER_PORT: ${SERVER_PORT:-8080}
+      # Optional: override H2 DB name if you want separate in-mem per container
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:kcbdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+      SPRING_FLYWAY_ENABLED: "true"
+    restart: unless-stopped
