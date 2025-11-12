@@ -1,7 +1,5 @@
-<<<<<<< HEAD
+
 # kcb-demo
-=======
-# KCB Demo — Spring Boot API (Docker Compose + Postgres)
 
 A production-ready Spring Boot 3 API called **kcb-demo** that runs anywhere with **Docker Compose**.
 Includes Postgres, Flyway migrations, health checks, and a minimal CRUD (Todo).
