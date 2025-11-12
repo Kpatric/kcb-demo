@@ -1,7 +1,7 @@
 
 # kcb-demo
 
-A production-ready Spring Boot 3 API called **kcb-demo** that runs anywhere with **Docker Compose**.
+Spring Boot 3 API called **kcb-demo** that runs anywhere with **Docker Compose**.
 Includes h2, Flyway migrations, health checks
 
 ## Stack
@@ -11,18 +11,16 @@ Includes h2, Flyway migrations, health checks
 - Dockerfile (multi-stage), Docker Compose
 - Makefile conveniences
 - JUnit 5 test starter
-- 
 
 ---
 
 ## Quickstart (Docker Compose)
 
-1. Use .env
-2. Build & run:
+1. Build & run:
    ```bash
    docker compose up --build
    ```
-3. Verify:
+2. Verify:
    ```bash
    curl -s -u user:password http://localhost:8080/api/books
    curl http://localhost:8080/actuator/health
