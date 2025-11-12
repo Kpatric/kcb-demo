@@ -1,11 +1,11 @@
-# 1) Build
-FROM maven:3.9-eclipse-temurin-17 AS build
+FROM gradle:8.10.2-jdk17 AS build
 WORKDIR /app
-COPY . .
-RUN ./gradlew build -x test --quiet
-# 2) Run
+COPY settings.gradle.kts build.gradle.kts ./
+COPY src src
+RUN gradle clean bootJar -x test --no-daemon
+
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app/app.jar"]
