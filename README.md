@@ -2,7 +2,7 @@
 # kcb-demo
 
 A production-ready Spring Boot 3 API called **kcb-demo** that runs anywhere with **Docker Compose**.
-Includes h2, Flyway migrations, health checks, and a minimal CRUD (Todo).
+Includes h2, Flyway migrations, health checks
 
 ## Stack
 - Java 17, Spring Boot 3.3.x, Gradle 8.x
