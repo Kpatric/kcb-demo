@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+
 # kcb-demo
-=======
-# KCB Demo — Spring Boot API (Docker Compose + Postgres)
 
 A production-ready Spring Boot 3 API called **kcb-demo** that runs anywhere with **Docker Compose**.
-Includes Postgres, Flyway migrations, health checks, and a minimal CRUD (Todo).
+Includes h2, Flyway migrations, health checks, and a minimal CRUD (Todo).
 
 ## Stack
 - Java 17, Spring Boot 3.3.x, Gradle 8.x
@@ -26,7 +24,7 @@ Includes Postgres, Flyway migrations, health checks, and a minimal CRUD (Todo).
    ```
 3. Verify:
    ```bash
-   curl --location 'http://localhost:8080/v1/api/books' \
+   curl --location 'http://localhost:8080/api/books' \
 --header 'Authorization: Basic dXNlcjpwYXNzd29yZA==' \
 --header 'Cookie: JSESSIONID=D4DFBBBBEE39C5CACF1AB5D1B57144B9'
    curl http://localhost:8080/actuator/health
@@ -38,44 +36,4 @@ docker compose down        # stop only
 docker compose down -v     # stop + remove DB volume
 ```
 
----
 
-## Local run (optional, no Docker)
-
-1. Create a Postgres DB and export env vars:
-   ```bash
-   export DB_HOST=localhost
-   export DB_PORT=5432
-   export DB_NAME=app
-   export DB_USER=postgres
-   export DB_PASSWORD=postgres
-   ```
-2. Run the app:
-   ```bash
-   ./gradlew bootRun
-   ```
-
----
-
-## API Demo
-
-**Todos**:
-- `POST /api/todos`
-- `GET /api/todos`
-- `GET /api/todos/{id}`
-- `PUT /api/todos/{id}`
-- `DELETE /api/todos/{id}`
-
-Example payload:
-```json
-{ "title": "Open PR for kcb-demo", "completed": false }
-```
-
----
-
-## What to highlight in interviews
-- 12-factor style via env vars
-- Repeatable schema with Flyway
-- Multi-stage Docker build; minimal runtime image
-- Single command developer experience (`docker compose up --build`)
->>>>>>> be30ccb (kcb demo)
