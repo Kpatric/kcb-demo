@@ -24,7 +24,7 @@ Includes h2, Flyway migrations, health checks, and a minimal CRUD (Todo).
    ```
 3. Verify:
    ```bash
-   curl --location 'http://localhost:8080/v1/api/books' \
+   curl --location 'http://localhost:8080/api/books' \
 --header 'Authorization: Basic dXNlcjpwYXNzd29yZA==' \
 --header 'Cookie: JSESSIONID=D4DFBBBBEE39C5CACF1AB5D1B57144B9'
    curl http://localhost:8080/actuator/health
