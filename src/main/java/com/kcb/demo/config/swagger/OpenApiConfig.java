@@ -12,16 +12,16 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
-                        name = "nestguard.io",
-                        email = "contact@nestguard.io",
-                        url = "https://nestguard.io"
+                        name = "kcb-demo.io",
+                        email = "contact@kcb-demo.io",
+                        url = "https://kcb-demo.io"
                 ),
                 description = "OpenApi documentation for Spring Security",
-                title = "OpenApi specification - nestguard.io",
+                title = "OpenApi specification - kcb-demo.io",
                 version = "1.0",
                 license = @License(
                         name = "Licence name",
-                        url = "https://nestguard.io"
+                        url = "https://kcb-demo.io"
                 ),
                 termsOfService = "Terms of service"
         ),

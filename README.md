@@ -27,7 +27,10 @@ Includes h2, Flyway migrations, health checks, and a minimal CRUD (Todo).
    curl -s -u user:password http://localhost:8080/api/books
    curl http://localhost:8080/actuator/health
    ```
-
+3. Swagger:
+   ```bash
+   http://localhost:8080/swagger-ui/index.html
+   ```
 Stop:
 ```bash
 docker compose down       
