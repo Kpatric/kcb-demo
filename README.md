@@ -47,16 +47,3 @@ docker compose down -v     # stop + remove DB volume
    ```bash
    ./gradlew bootRun
    ```
-
----
-
-
-
----
-
-## What to highlight in interviews
-- 12-factor style via env vars
-- Repeatable schema with Flyway
-- Multi-stage Docker build; minimal runtime image
-- Single command developer experience (`docker compose up --build`)
->>>>>>> be30ccb (kcb demo)
