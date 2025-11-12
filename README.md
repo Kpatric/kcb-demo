@@ -42,34 +42,15 @@ docker compose down -v     # stop + remove DB volume
 
 ## Local run (optional, no Docker)
 
-1. Create a Postgres DB and export env vars:
-   ```bash
-   export DB_HOST=localhost
-   export DB_PORT=5432
-   export DB_NAME=app
-   export DB_USER=postgres
-   export DB_PASSWORD=postgres
    ```
-2. Run the app:
+1. Run the app:
    ```bash
    ./gradlew bootRun
    ```
 
 ---
 
-## API Demo
 
-**Todos**:
-- `POST /api/todos`
-- `GET /api/todos`
-- `GET /api/todos/{id}`
-- `PUT /api/todos/{id}`
-- `DELETE /api/todos/{id}`
-
-Example payload:
-```json
-{ "title": "Open PR for kcb-demo", "completed": false }
-```
 
 ---
 
